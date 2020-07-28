@@ -1,5 +1,0 @@
-package co.kr.test.mapper;
-
-public interface TimeMapper {
-
-}
