@@ -1,0 +1,16 @@
+package kr.co.spring.ch03.domain;
+
+public class Restaurant {
+	
+	private String final name;
+	
+	public Restaurant(String string) {
+
+	}
+
+	public String getName() {
+		
+		return "Bob Zip";
+	}
+
+}

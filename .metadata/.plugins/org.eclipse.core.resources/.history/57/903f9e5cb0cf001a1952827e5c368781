@@ -1,0 +1,23 @@
+package kr.co.spring.ch02.classes1;
+
+
+public class CarFactory {
+
+	private static CarFactory instance = null;
+	public static final CarFactory getInstance() {
+		
+		if (instance == null) {
+			instance = new CarFactory();
+		}
+		return instance;
+	}
+
+	public Car car() {
+		return new Car(benzEngine());
+	}
+
+	public BenzEngine benzEngine() {
+		return new BenzEngine();
+	}
+
+}

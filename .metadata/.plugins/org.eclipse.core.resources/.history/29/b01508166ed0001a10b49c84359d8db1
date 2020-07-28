@@ -1,0 +1,14 @@
+package kr.co.spring.ch03.domain;
+
+public class Restaurant {
+
+	public Restaurant(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getName() {
+		
+		return "Bob Zip";
+	}
+
+}

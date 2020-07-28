@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- beans : @Configuration -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- <bean></bean> : @Bean -->
+	<!-- id : Bean의 이름 ( Factory에서의 메소드 이름 ) -->
+	<!-- BenzEngine benzEngine(){ return new BenzEngine(); } -->
+	<bean id="benzEngine" class="kr.co.spring.ch02.classes2.BenzEngine" />
+	
+	<bean id="car">
+		
+	</bean>
+	
+
+</beans>

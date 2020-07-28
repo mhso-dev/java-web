@@ -1,0 +1,12 @@
+package kr.co.spring.ch02;
+
+public class Example01 {
+
+	public static void main(String[] args) {
+		// 1) CarFactory가 Spring Container에 등록되어 있다
+		// 2) Spring Container에 Car를 달라고 요청
+		
+		// Spring Context를 준비한다.
+	}
+	
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.4+C:\Users\bitbit\Desktop\java-web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2486366073.index
+2422156103.index
+173439706.index

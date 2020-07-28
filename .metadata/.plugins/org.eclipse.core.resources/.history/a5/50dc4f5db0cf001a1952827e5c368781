@@ -1,0 +1,16 @@
+package kr.co.spring.ch02.classes1;
+
+
+public class CarFactory {
+
+	
+
+	public Car car() {
+		return new Car(benzEngine());
+	}
+
+	public BenzEngine benzEngine() {
+		return new BenzEngine();
+	}
+
+}

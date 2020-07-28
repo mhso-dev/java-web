@@ -1,0 +1,15 @@
+package kr.co.spring.ch02.classes1;
+
+// CarFactory 클래스를 BeanFactory에 등록 시켜서 설계도로 만들 것이다.
+//   => CarFactory를 클래스를 Spring Container에 포함시키겠다.
+public class CarFactory {
+
+	public Car car() {
+		return new Car(benzEngine());
+	}
+
+	public BenzEngine benzEngine() {
+		return new BenzEngine();
+	}
+
+}

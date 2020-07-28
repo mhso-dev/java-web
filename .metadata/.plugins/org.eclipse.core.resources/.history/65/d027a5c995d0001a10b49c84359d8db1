@@ -1,0 +1,6 @@
+package kr.co.spring.test.persistence;
+
+@RunWith(Spring)
+public class DataSourceTests {
+
+}

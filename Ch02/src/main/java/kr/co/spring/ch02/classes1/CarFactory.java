@@ -1,0 +1,21 @@
+package kr.co.spring.ch02.classes1;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+// CarFactory 클래스를 Spring Container에 등록 시켜서 설계도로 만들 것이다.
+//   => CarFactory를 클래스를 Spring Container에 포함시키겠다.
+
+@Configuration // CarFactory를 Spring Container에 등록
+public class CarFactory {
+
+	@Bean // 실제 객체를 만드는 방법들이 설명 되어 있는 메소드
+	public Car car() { return new Car(benzEngine()); }
+
+	@Bean
+	public BenzEngine benzEngine() { return new BenzEngine(); }
+
+}
+
+// Spring Context : Spring Container + Spring(Bean)Factory
+// Spring Framework : Spring Context + 기타 Web에 대한각종 기능들  

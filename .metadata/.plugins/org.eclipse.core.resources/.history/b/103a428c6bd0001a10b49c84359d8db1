@@ -1,0 +1,10 @@
+package kr.co.spring.ch03.domain;
+
+public class Restaurant {
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

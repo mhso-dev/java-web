@@ -1,0 +1,5 @@
+package kr.co.spring.ch01.classes1;
+
+public abstract class Engine {
+	
+}

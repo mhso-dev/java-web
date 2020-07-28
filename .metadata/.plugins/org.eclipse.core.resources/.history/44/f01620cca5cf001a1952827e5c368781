@@ -1,0 +1,12 @@
+package kr.co.spring.ch01;
+
+import kr.co.spring.ch01.classes2.CarFactory;
+
+public class Example02 {
+
+	public static void main(String[] args) {
+		// main에서 직접 자동차를 만드는 것이 아니다.
+		CarFactory carFactory = new CarFactory();
+	}
+	
+}

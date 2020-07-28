@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- root-context.xml은 웹이랑 상관이 없는 Bean을 설정하는 부분 -->
+	<bean id="restaurant" class="kr.co.spring.ch03.domain.Restaurant">
+		<constructor-arg></constructor-arg>
+	</bean>
+</beans>

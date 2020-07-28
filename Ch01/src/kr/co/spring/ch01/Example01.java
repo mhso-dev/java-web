@@ -1,0 +1,27 @@
+package kr.co.spring.ch01;
+
+import kr.co.spring.ch01.classes1.AudiEngine;
+import kr.co.spring.ch01.classes1.BenzEngine;
+import kr.co.spring.ch01.classes1.Car;
+
+public class Example01 {
+
+	public static void main(String[] args) {
+		
+		// 프로젝트 전체에 걸쳐진 IOC / DI 의 개념을 생각해 봐야 합니다.
+		
+		// main 함수의 뜻?
+		//  - Project에서의 main이란 단 하나밖에 없는 유일한 진입점(Entry Point)
+		
+		// IOC와 DI의 존재 이유 : 어떠한 객체가 어디서 만들어져야 하고, 어디서 사용이 되는지를 각각의 클래스가 몰라야 한다.
+		
+		// main 함수에서 객체를 만들게 되는 순간 프로그램 자체가 new를 이용해 객체를 만들고 있는 클래스와 '강결합'이 일어납니다.
+		
+		Car car1 = new Car(new BenzEngine());
+		Car car2 = new Car(new AudiEngine());
+		
+		car1.start();
+		car2.stop();
+	}
+	
+}

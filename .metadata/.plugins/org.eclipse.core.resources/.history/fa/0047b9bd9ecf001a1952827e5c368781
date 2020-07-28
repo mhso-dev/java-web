@@ -1,0 +1,17 @@
+package kr.co.spring.ch01.classes1;
+
+public class BenzEngine extends Engine {
+
+	@Override
+	public void turnOn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void turnOff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

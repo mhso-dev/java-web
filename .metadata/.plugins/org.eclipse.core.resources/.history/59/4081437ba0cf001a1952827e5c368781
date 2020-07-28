@@ -1,0 +1,22 @@
+package kr.co.spring.ch01.classes1;
+
+public class Car {
+	
+	// IOC : 엔진 클래스가 실제 어떠한 클래스인지 모르는 상태에서 엔진 클래스 객체에 대한 생성을 외부에서 진행한다.
+	private Engine engine;
+
+	public Car(Engine engine) {
+		this.engine = engine;
+	}
+
+	public void start() {
+		engine.turnOn();
+		System.out.println("자동차가 출발합니다.");
+	}
+
+	public void stop() {
+		System.out.println("자동차가 정지합니다.");
+		engine.turnOff();
+	}
+
+}

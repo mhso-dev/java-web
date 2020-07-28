@@ -1,0 +1,1 @@
+jdbc.driverClassName=net.sf.log4jdbc.sql.jdbcapi.DriverSpy

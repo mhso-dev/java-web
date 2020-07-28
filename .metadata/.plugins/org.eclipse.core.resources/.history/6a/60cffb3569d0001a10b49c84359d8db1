@@ -1,0 +1,10 @@
+package kr.co.spring.ch03.test.domain;
+
+// 이 클래스는 테스트 전용 클래스가 되어야 한다.
+//  Spring 에서 테스트를 진행 한다.
+//   JUnit4 + Spring 설정
+
+@RunWith(SpringJUnit4ClassRunner.class)
+public class RestaurantTest {
+
+}

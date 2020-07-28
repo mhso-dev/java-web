@@ -1,0 +1,24 @@
+package kr.co.spring.ch01;
+
+import kr.co.spring.ch01.classes2.Car;
+import kr.co.spring.ch01.classes2.CarFactory;
+
+public class Example02 {
+
+	public static void main(String[] args) {
+		// main에서 직접 자동차를 만드는 것이 아니다.
+		
+		// 자동차 공장을 세워서
+//		CarFactory carFactory = new CarFactory();	// 원래는 여기가 SingleTon 디자인 패턴이 적용 되어야 한다.
+		CarFactory carFactory = CarFactory.getInstance();
+		
+		// 공장에 자동차를 달라고 요청( 함수 호출 ) - Bean 호출
+		Car car = carFactory.car();
+		
+		car.start();
+		
+		
+		
+	}
+	
+}

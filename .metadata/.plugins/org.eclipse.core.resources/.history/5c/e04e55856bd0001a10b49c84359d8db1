@@ -1,0 +1,5 @@
+package kr.co.spring.ch03.domain;
+
+public class Restaurant {
+
+}
