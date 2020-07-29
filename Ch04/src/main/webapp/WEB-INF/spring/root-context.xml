@@ -29,6 +29,11 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	
+	<!-- xml에다가 쿼리를 집어 넣어야 한다. -->
+	<!-- myBatis 에게 쿼리가 들어있는 xml을 검색해라 -->
+	<mybatis-spring:scan base-package="kr.co.spring.ch04.mapper" />
+	
 </beans>
 
 
