@@ -2,4 +2,7 @@
 <aop-reference-model>
 <aop-project name="Ch03"/>
 <aop-project name="Ch04"/>
+<aop-project name="Ch05"/>
+<aop-project name="Ch06"/>
+<aop-project name="MyBoard"/>
 </aop-reference-model>

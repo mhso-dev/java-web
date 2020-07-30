@@ -1,4 +1,4 @@
-package kr.co.spring;
+package kr.co.spring.myboard.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
