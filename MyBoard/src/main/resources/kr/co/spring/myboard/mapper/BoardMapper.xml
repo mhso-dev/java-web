@@ -4,44 +4,91 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.co.spring.myboard.mapper.BoardMapper">
-	<!-- resultType : 쿼리를 사용했을 때 결과를 저장할 클래스를 지정 -->
+	<sql id="criteria">
+		<trim prefix=" AND (" suffix=") " prefixOverrides="OR">
+			<foreach collection="typeArr" item='type'>
+				<trim prefix="OR">
+					<choose>
+						<when test="type=='T'.toString()">
+							title like CONCAT('%',#{keyword},'%')
+						</when>
+						<when test="type=='C'.toString()">
+							content like CONCAT('%',#{keyword},'%')
+						</when>
+						<when test="type=='W'.toString()">
+							writer like CONCAT('%',#{keyword},'%')
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
 	<select id="getList"
 		resultType="kr.co.spring.myboard.domain.BoardVO">
 		<![CDATA[
 			select * from tbl_board where bno > 0
 		]]>
 	</select>
-	
-	<!-- 게시글을 저장할 때 몇 번 게시물인지 알 수 가 없다. -->
-	<insert id="insert">
+
+	<select id="getListWithPaging"
+		resultType="kr.co.spring.myboard.domain.BoardVO">
 		<![CDATA[
-			insert into tbl_board(bno, title, content, writer)
-			select case count(*) when 0 then 1 else max(bno) + 1 end, #{title}, #{content}, #{writer} from
-			tbl_board where bno > 0
+			select p.bno, title, content, writer,
+				   regdate, updatedate, replycnt
+			from
+				(select bno
+			    from tbl_board
+				order by bno desc
+				limit #{start}, #{end}
+			    ) q
+			join tbl_board p
+			on p.bno = q.bno
+			where p.bno > 0
 		]]>
-	</insert>
-	<!-- 게시글을 저장할 때 미리 bno 값을(키값) 발생 시키고, 발생된 키값을 insert 하기 selectKey -->
-	
-	<insert id="insertSelectKey">
-		<!-- selectKey 태그를 활용한다 -> myBatis한테 key를 발생시킬 쿼리다 -->
-		<!-- 쿼리에 의해서 발생된 값을 keyProperty에 저장 -->
-		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
-			<![CDATA[
-				select case count(*) when 0 then 1 else max(bno)+1 end from tbl_board where bno > 0
-			]]>
-		</selectKey>
-		
-		<![CDATA[
-			insert into tbl_board(bno, title, content, writer)
-			values (#{bno}, #{title}, #{content}, #{writer})			
-		]]>
-	</insert>
-	
-	<!-- 게시글 조회 read -->
-	<select id="read" resultType="kr.co.spring.myboard.domain.BoardVO">
-		select * from tbl_board where bno=#{bno}
+		<include refid="criteria"></include>
+
 	</select>
-	
+
+	<insert id="insert">
+		insert into tbl_board(bno, title, content, writer)
+		values (select case count(*) when 0 then 1 else max(bno) + 1 end from
+		tbl_board, #{title}, #{content}, #{writer})
+	</insert>
+
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE"
+			resultType="long">
+			select case count(*) when 0 then 1 else max(bno) + 1 end
+			from tbl_board
+		</selectKey>
+
+		insert into tbl_board(bno, title, content, writer)
+		values (#{bno},
+		#{title}, #{content}, #{writer})
+	</insert>
+
+	<select id="read" resultType="kr.co.spring.myboard.domain.BoardVO">
+		select * from tbl_board where bno = #{bno}
+	</select>
+
+	<delete id="delete">
+		delete from tbl_board where bno = #{bno}
+	</delete>
+
+	<update id="update">
+		update tbl_board
+		set title = #{title},
+		content = #{content},
+		updateDate = current_timestamp
+		where bno = #{bno}
+	</update>
+
+	<select id="getTotalCount" resultType="int">
+		select count(*) from tbl_board where bno > 0
+
+		<include refid="criteria"></include>
+	</select>
+
 </mapper>
 
 
