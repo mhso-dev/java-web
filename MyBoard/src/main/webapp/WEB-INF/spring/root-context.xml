@@ -33,5 +33,5 @@
 	</bean>
 	
 	<mybatis-spring:scan base-package="kr.co.spring.myboard.mapper"/>
-	
+	<context:component-scan base-package="kr.co.spring.myboard.service" />
 </beans>

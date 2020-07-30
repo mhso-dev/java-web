@@ -1429,3 +1429,155 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-07-30 12:42:08.299
+!MESSAGE Unable to start language server: Angular Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-server\index.js, --ngProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-service, --tsProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\typescript, --stdio, --logVerbosity, terse], workingDir=C:\Users\bitbit\Desktop]
+!STACK 0
+java.io.IOException: Unable to start language server: Angular Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-server\index.js, --ngProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-service, --tsProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\typescript, --stdio, --logVerbosity, terse], workingDir=C:\Users\bitbit\Desktop]
+	at org.eclipse.lsp4e.server.ProcessStreamConnectionProvider.start(ProcessStreamConnectionProvider.java:50)
+	at org.eclipse.lsp4e.LanguageServerWrapper.start(LanguageServerWrapper.java:213)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getInitializedServer(LanguageServerWrapper.java:667)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$14(LanguageServiceAccessor.java:589)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(Unknown Source)
+	at java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:602)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-07-30 12:42:09.241
+!MESSAGE Unable to start language server: HTML Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\vscode-html-languageserver\dist\htmlServerMain.js, --stdio], workingDir=C:\Users\bitbit\Desktop]
+!STACK 0
+java.io.IOException: Unable to start language server: HTML Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\vscode-html-languageserver\dist\htmlServerMain.js, --stdio], workingDir=C:\Users\bitbit\Desktop]
+	at org.eclipse.lsp4e.server.ProcessStreamConnectionProvider.start(ProcessStreamConnectionProvider.java:50)
+	at org.eclipse.lsp4e.LanguageServerWrapper.start(LanguageServerWrapper.java:213)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getInitializedServer(LanguageServerWrapper.java:667)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$14(LanguageServiceAccessor.java:589)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(Unknown Source)
+	at java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:602)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-07-30 12:42:11.279
+!MESSAGE Unable to start language server: HTML Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\vscode-html-languageserver\dist\htmlServerMain.js, --stdio], workingDir=C:\Users\bitbit\Desktop]
+!STACK 0
+java.io.IOException: Unable to start language server: HTML Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\vscode-html-languageserver\dist\htmlServerMain.js, --stdio], workingDir=C:\Users\bitbit\Desktop]
+	at org.eclipse.lsp4e.server.ProcessStreamConnectionProvider.start(ProcessStreamConnectionProvider.java:50)
+	at org.eclipse.lsp4e.LanguageServerWrapper.start(LanguageServerWrapper.java:213)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getInitializedServer(LanguageServerWrapper.java:667)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$14(LanguageServiceAccessor.java:589)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(Unknown Source)
+	at java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:602)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-07-30 12:42:11.777
+!MESSAGE Unable to start language server: Angular Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-server\index.js, --ngProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-service, --tsProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\typescript, --stdio, --logVerbosity, terse], workingDir=C:\Users\bitbit\Desktop]
+!STACK 0
+java.io.IOException: Unable to start language server: Angular Language Server: ProcessStreamConnectionProvider [commands=[null, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-server\index.js, --ngProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\@angular\language-service, --tsProbeLocations, C:\Users\bitbit\eclipse\jee-2020-06\eclipse\..\..\..\.p2\pool\plugins\org.eclipse.wildwebdeveloper_0.5.8.202005190736\node_modules\typescript, --stdio, --logVerbosity, terse], workingDir=C:\Users\bitbit\Desktop]
+	at org.eclipse.lsp4e.server.ProcessStreamConnectionProvider.start(ProcessStreamConnectionProvider.java:50)
+	at org.eclipse.lsp4e.LanguageServerWrapper.start(LanguageServerWrapper.java:213)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getInitializedServer(LanguageServerWrapper.java:667)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$14(LanguageServiceAccessor.java:589)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(Unknown Source)
+	at java.util.stream.ReferencePipeline.toArray(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:602)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 12:44:22.431
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 12:44:22.440
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 12:44:22.454
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 12:45:43.871
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 12:45:43.878
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 12:45:43.886
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 13:07:26.720
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 13:07:26.729
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 13:07:51.010
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 13:07:51.017
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 13:07:51.026
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:02:56.231
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:02:56.240
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:03:16.950
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:03:16.981
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:03:16.993
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:11:07.646
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:11:07.652
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:11:07.659
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:38:34.272
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:38:34.280
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:38:36.861
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:38:36.878
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-07-30 14:38:36.885
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT

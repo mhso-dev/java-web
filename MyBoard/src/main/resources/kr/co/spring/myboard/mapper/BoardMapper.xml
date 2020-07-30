@@ -11,7 +11,8 @@
 			select * from tbl_board where bno > 0
 		]]>
 	</select>
-
+	
+	<!-- 게시글을 저장할 때 몇 번 게시물인지 알 수 가 없다. -->
 	<insert id="insert">
 		<![CDATA[
 			insert into tbl_board(bno, title, content, writer)
@@ -19,4 +20,47 @@
 			tbl_board where bno > 0
 		]]>
 	</insert>
+	<!-- 게시글을 저장할 때 미리 bno 값을(키값) 발생 시키고, 발생된 키값을 insert 하기 selectKey -->
+	
+	<insert id="insertSelectKey">
+		<!-- selectKey 태그를 활용한다 -> myBatis한테 key를 발생시킬 쿼리다 -->
+		<!-- 쿼리에 의해서 발생된 값을 keyProperty에 저장 -->
+		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+			<![CDATA[
+				select case count(*) when 0 then 1 else max(bno)+1 end from tbl_board where bno > 0
+			]]>
+		</selectKey>
+		
+		<![CDATA[
+			insert into tbl_board(bno, title, content, writer)
+			values (#{bno}, #{title}, #{content}, #{writer})			
+		]]>
+	</insert>
+	
+	<!-- 게시글 조회 read -->
+	<select id="read" resultType="kr.co.spring.myboard.domain.BoardVO">
+		select * from tbl_board where bno=#{bno}
+	</select>
+	
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
