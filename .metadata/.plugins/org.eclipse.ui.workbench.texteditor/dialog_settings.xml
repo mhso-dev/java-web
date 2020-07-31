@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="UTF-8"/>
+		<item key="selection" value="move"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="EUC-KR"/>
-			<item value="&lt;properties&gt;"/>
-			<item value="slf"/>
-			<item value="bee"/>
-			<item value="core"/>
-			<item value="mysql"/>
-			<item value="outof"/>
-			<item value="driver"/>
-			<item value="jdbc"/>
-			<item value="oracle"/>
+			<item value="move"/>
+			<item value=".move"/>
+			<item value="cricri"/>
+			<item value="criteria"/>
+			<item value="getTotal"/>
+			<item value="getTotalCount"/>
+			<item value="&quot;getTotalCount&quot;"/>
+			<item value="yoyoyo"/>
+			<item value="Criteria"/>
+			<item value="keyword"/>
+			<item value="Type"/>
+			<item value="type"/>
+			<item value="hohoho"/>
+			<item value="yayaya"/>
+			<item value="list?"/>
 		</list>
 		<list key="replacehistory">
 			<item value="UTF-8"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="824"/>
-		<item key="DIALOG_Y_ORIGIN" value="268"/>
+		<item key="DIALOG_X_ORIGIN" value="746"/>
+		<item key="DIALOG_Y_ORIGIN" value="218"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

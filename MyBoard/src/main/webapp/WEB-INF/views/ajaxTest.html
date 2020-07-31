@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서울시 미세먼지 현황 파악하기</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+.red {
+	color: red;
+}
+</style>
+<script>
+	const loadMise = () => {
+		$.ajax({
+			url : "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
+			type: "get",
+			// success : ajax 통신이 성공 했을 때 실행할 함수를 지정한다.
+			// 이 함수의 매개변수에는 서버가 보내준 데이터가 들어가 있습니다.
+			success: function(response){
+				const miseList = response['RealtimeCityAir']['row'];	// 데이터
+				
+				const miseListBox = $("#mise-list-box");
+				miseListBox.empty();	// 자식 엘리먼트를 모두 삭제
+				// forEach -> 리스트의 원소를 하나씩 순회할 때 사용한다.
+				miseList.forEach(( item ) => {
+				
+				const elem = document.createElement('li');
+				$(elem).text(`${item['MSRSTE_NM']} - ${item['PM10']}`);
+				if(item['PM10'] > 25 ){
+					$(elem).css('color', 'red');
+				}
+					
+				miseListBox.append(elem);
+				});
+			}
+		});
+	}
+	
+	
+	
+</script>
+
+</head>
+<body>
+	<ul id="mise-list-box">
+		<li>종로구 - 32</li>
+		<li>광진구 - 20</li>
+	</ul>
+	<button id="btn-load-mise" onclick="loadMise()">미세먼지 정보 불러오기</button>
+</body>
+</html>
